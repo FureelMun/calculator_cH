@@ -1,0 +1,113 @@
+
+Console.WriteLine("Привет, человек, что делаем сегодня?");
+Console.WriteLine("1 - сложить");
+Console.WriteLine("2 - вычесть");
+Console.WriteLine("3 - умножить");
+Console.WriteLine("4 - факториал числа");
+Console.WriteLine("5 - косинус");
+Console.WriteLine("6 - степень");
+Console.WriteLine("7 - находим корень");
+Console.WriteLine("8 - находим проценты");
+Console.WriteLine("9 - на сегодня все");
+bool to_do = true;
+int first_int = 0;
+int seconde_int = 0;
+int b = 0;
+while (to_do)
+{
+string what_do_str =  Console.ReadLine();
+int what_do_int = Convert.ToInt32(what_do_str);
+    
+switch (what_do_int)
+    {
+        case 1:
+        case 2:
+        case 3:
+        case 6:
+            Console.WriteLine("Введите первое число: ");
+            string first_str = Console.ReadLine();
+            Console.WriteLine("Введите второе число: ");
+            string seconde_str = Console.ReadLine();
+            first_int = Convert.ToInt32(first_str);
+            seconde_int = Convert.ToInt32(seconde_str);
+            Convert.ToInt32(seconde_str);
+            b = first_int + seconde_int;
+            break;
+        case 4:
+        case 5:
+        case 7:
+        case 8:
+            Console.WriteLine("Введите число: ");
+            string first_st = Console.ReadLine();
+            first_int = Convert.ToInt32(first_st);
+            break;
+    }
+    switch (what_do_int)
+    {
+        case 1:
+            b = first_int + seconde_int;
+            Console.WriteLine("Сумма чисел равна: " + b);
+            break;
+        case 2:
+            b = first_int - seconde_int;
+            Console.WriteLine("Разность чисел равна: " + b);
+            break;
+        case 3:
+            b = first_int * seconde_int;
+            Console.WriteLine("Произведение чисел равна: " + b);
+            break;
+        case 4:
+            int c = first_int;
+            do
+            {
+                c = c * (first_int - 1);
+                first_int -= 1;
+            } while (first_int != 1);
+            Console.WriteLine("Факториал данного числа: " + c);
+            break;
+        case 5:
+            Console.WriteLine("Косинус данного числа: " + Math.Cos(first_int));
+            break;
+        case 6:
+            Console.WriteLine("Степень данного числа: " + Math.Pow(first_int, seconde_int));
+            break;
+        case 7:
+            Console.WriteLine("Корень данного числа: " + Math.Sqrt(first_int));
+            break;
+        case 8:
+            int one_p = first_int / 100;
+            Console.WriteLine("Процент от данного числа: " + one_p);
+            break;
+        case 9:
+            to_do = false;
+            break;
+        default:
+           
+            Console.WriteLine("Скушай пирожок, я не знаю, что ты ввел");
+            break;
+    switch (what_do_int)
+            { 
+        case 1:
+        case 2:
+        case 3:
+        case 6:
+        case 5:
+        case 4:
+        case 7:
+        case 8:
+                    Console.WriteLine("Выберите следующее ");
+                    Console.WriteLine("1 - сложить");
+                    Console.WriteLine("2 - вычесть");
+                    Console.WriteLine("3 - умножить");
+                    Console.WriteLine("4 - факториал числа");
+                    Console.WriteLine("5 - косинус");
+                    Console.WriteLine("6 - степень");
+                    Console.WriteLine("7 - находим корень");
+                    Console.WriteLine("8 - находим проценты");
+                    Console.WriteLine("9 - на сегодня все");
+                    break;
+    }
+
+    }
+
+}
